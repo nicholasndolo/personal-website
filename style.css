@@ -1,3 +1,10 @@
+:root {
+  --border-dark: #333;
+  --border-light: #f3f3f3;
+  --bg-dark: #121212;
+  --bg-light: #ffffff;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -40,7 +47,7 @@ nav ul li a::after{
   content: '';
   width: 0;
   height: 1px;
-  background: #ff004f;
+  background: #f0b71c;
   position:absolute;
   left: 0;
   bottom: -6px;
@@ -50,3 +57,66 @@ nav ul li a::after{
 nav ul li a:hover::after{
   width: 100%;
 }
+
+#profile{
+  padding: 80px 0;
+  color: #ababab;
+  height: 100vh;
+}
+
+.container{
+  padding: 10px 10%;
+  width: 100;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.image-container{
+  width: 35%;
+  position: relative;
+  border-radius: 1rem;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #f0b71c;
+  
+}
+
+.profile-text{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 10px;
+}
+
+.profile-text h1{
+  font-size: 50px;
+  margin-top: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  
+}
+
+.profile-text h1 span{
+  color: #f0b71c;
+}
+
+.profile-text h2{
+  font-size: 50px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.profile-text p{
+ margin-top: 20px;
+ font-size: large;
+ text-align: center;
+ width: 70%;
+}
+
+
