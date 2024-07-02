@@ -119,4 +119,85 @@ nav ul li a:hover::after{
  width: 70%;
 }
 
+#career-goals{
+  width: 100%;
+  height: 100vh;
+}
+
+#career-goals .container h1 {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+
+.container .stack {
+  background-color: #0b0b0b;
+  padding: 0 20px 20px;
+  border-radius: 0.3rem;
+  box-shadow: 2px 2px 12px 0 rgb(240, 183, 28);
+  position: relative;
+}
+
+
+
+.stack label {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.stack label h2 {
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  color: black;
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stack label h3 {
+  cursor: pointer;
+}
+
+.stack label h3:hover{
+  color:#f0b71c;
+}
+
+.stack label::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  font-size: 2rem;
+}
+
+.stack:hover label::after{
+  color: black;
+  transition: 0.5s;
+}
+
+.stack input:checked ~ label::after {
+  transform: rotate(135deg);
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.stack input {
+  appearance: none;
+}
+
+.stack input:checked ~ .content {
+  max-height: 100vh;
+}
+
+.content p{
+  padding-top: 20px;
+}
+
+
 
