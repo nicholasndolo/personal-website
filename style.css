@@ -448,6 +448,10 @@ nav .fas {
     margin-top: 10px;
   }
 
+  .header-container .date-time{
+    border: none;
+  }
+
   .profile-text p {
     font-size: small;
   }
