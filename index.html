@@ -5,27 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Website</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/0092c9c4fa.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header id="header">
+   <div class="header-container">
+    <div class="date-time">
+      <h3 id="current-day" data-testid="currentDay"></h3>
+      <p id="current-time" data-testid="currentTimeUTC"></p>
+    </div>
     <nav>
       <ul>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Goals</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#header">Profile</a></li>
+        <li><a href="#career-goals">Goals</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fas fa-times"></i>
       </ul>
+      <i class="fas fa-bars"></i>
     </nav>
+   </div>
   </header>
   <main>
     <section id="profile">
       <div class="container">
         <div class="row">
           <div class="image-container">
-            <div class="image-border">
-              <img src="images/profile.png" alt="profile picture" data-testid="slackProfilePicture" width="500" height="500"/>
-            </div>
-            
+              <img src="images/profile.png" alt="profile picture" data-testid="slackProfilePicture" class="responsive-image"/>
           </div>
           <div class="profile-text">
             <h1>I'm <span data-testid="slackDisplayName">Nick Ndolo</span>.<br>
@@ -112,6 +117,49 @@
           </div>
         </div>
         
+    </section>
+    <section id="contact" class="contact-me">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 className="sub-title">Contact Me</h1>
+            <p data-testid="slackEmail"> <i class="fas fa-paper-plane"></i> nicholas.nmalinda@gmail.com</p>
+            <p> <i class="fas fa-phone-square-alt"></i> +254 706333429</p>
+            <div class="social-icons">
+              <a href=""><i class="fab fa-facebook"></i></a>
+              <a href=""><i class="fab fa-twitter-square"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+              <a href=""><i class="fab fa-linkein"></i></a>
+            </div>
+            <a href="images/cv.pdf" download class="btn btn2">Download CV</a>
+            
+          </div>
+          <div class="contact-right">
+            <form action="">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="footer">
+      <div class="footer-container">
+        <div class="hng-links">
+          <p>Useful links for Devs </p>
+            <div >
+              <a href="https://hng.tech/learn" target="_blank" data-testid="hngLink">Learn</a> &nbsp;|&nbsp;
+              <a href="https://keyword.dog/" target="_blank" data-testid="keywordLink">Keyword.dog</a>&nbsp;|&nbsp;
+            <a href="https://scrapeanyweb.site/" target="_blank" data-testid="scrapeanywebLink">Scrape any website</a>
+            </div>
+          
+        </div>
+        <div class="copyright">
+          <p>Copyright &copy; Nick. Made with <i class="fas fa-heart"></i></p>
+        </div>
+      </div>
     </section>
   </main>
   <script src="./scripts.js"></script>
